@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" 
+	th:replace="normal/base::layout(~{::section})">
+	<head>
+		<meta charset="UTF-8"/>
+			<title>User Dashboard</title>
+	</head>
+	<body>
+
+			<section class="banner1 d-flex justify-content-center align-items-center">
+			
+					<div class="container">
+					
+							<div class="col-md-6 offset-md-2">
+						
+								<div class="my-card">
+								
+									<div class="card mt-1">
+									
+										<div class="card-body">
+										
+											<div class="container text-center" >
+												<img class=""style="width:80px;" src="" th:src="@{/img/notes.png}"/>
+											</div>
+												<h2 class="text-center" style ="color:black;">Add Your Tasks</h2>
+												
+												<div class="container-fluid mt-1 ">
+												
+																							
+													<div class="col-md-6 offset-md-3">
+														
+														<form action="#"
+															
+																th:object="${content}"
+																method="POST"
+																th:action="@{/user/process-contact}"
+																class="mt-2">
+											
+															<!--	title -->
+																	<!--	<div class="mt-4">
+																	<div class="input text">
+																	<input required type="text" id="title" 
+																	name="title"
+																	row="20"
+																	placeholder="enter your title"
+																	 class="form-control"/>
+																	</div>		-->
+												
+												
+																	<div class="form-group">
+												   						 <label for="title"><b>Title</b></label>
+												    
+												    						<input name="title" type="text" class="form-control" placeholder="Enter your task title" required /> <br>
+					    
+												  					</div>	
+												
+																	<!--content-->
+																	
+																	<!--<div class="mt-4">
+																		
+																	<div class="input text">
+																				
+																		<input required type="text" id="content" 
+																		name="content"
+																		row="20"
+																		 placeholder="enter your content"
+																		 class="form-control"/></br>
+																	</div>			-->
+											
+											
+																		<div class="form-group">
+																		
+				    														<label for="content" ><b>Content</b></label>
+				  														  	<input name="content" type="text" class="form-control" id="content" placeholder="Enter Content" required /><br>
+				    
+				  														</div>
+				 
+											
+																		<div class="container mt-4">
+																			<button class="btn btn-success">Save Task</button>
+																		</div>
+																		
+															</form>
+															
+														</div>
+														
+													</div>
+													
+												</div>
+												
+										</div>
+										
+									</div>
+									
+							</div>
+							
+						</div>
+					
+							
+				</section>
+	</body>
+</html>

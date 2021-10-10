@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" 
+	th:replace="normal/base::layout(~{::section})">
+	<head>
+		<meta charset="UTF-8"/>
+		<title>User Dashboard</title>
+	</head>
+	<body>
+		<section class="banner d-flex justify-content-center align-items-center">
+				<div class="text-center">
+				
+						<h1 class="font-weight-bold">WELCOME <span th:text="${user.name}"><h1></span></h1><br>
+						
+						<p> This is your private Dashboard. Start managaing your tasks in a smart way.</p> 
+						
+						<p>We provide very efficient way of handling your tasks.</p><br><br>
+						<!--<h1><a href="" th:href="@{/logout}">Logout</a></h1>-->
+				</div>
+				
+				<!--<h1> User Name:<span th:text="${user.name}"></span></h1>
+				-->
+		</section>
+	</body>
+</html>
